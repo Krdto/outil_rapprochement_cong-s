@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapprochement congés</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0px auto;
+        }
+        .logo {
+            width: 250px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .header {
+            position: relative;
+            height: 150px;
+        }
+        .btn-primary {
+            background-color: #164564;
+            border-color: #164564;
+        }
+        .btn-primary:hover {
+            background-color: #123456;
+            border-color: #123456;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/SEGULA_Technologies_logo.png') }}" alt="Logo de l'entreprise" class="logo">
+    </div>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    <div class="alert alert-dismissible fade show mt-2">
+                      {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                {% endwith %}
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file1">Fichier Excel de Référence:</label>
+                        <input type="file" class="form-control" id="file1" name="file1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="file2">Fichier Excel 2:</label>
+                        <input type="file" class="form-control" id="file2" name="file2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="file3">Fichier Excel 3:</label>
+                        <input type="file" class="form-control" id="file3" name="file3" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Comparer les Fichiers</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
