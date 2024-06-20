@@ -142,6 +142,12 @@ def upload_files():
             
             flash('Les fichiers ont été comparés avec succès!', 'success')
             print("Comparison successful")
+            
+            # Delete uploaded files after processing
+            os.remove(filename1)
+            os.remove(filename2)
+            os.remove(filename3)
+            
             return redirect(url_for('download_file', filename=f'output_{file2.filename}.xlsx'))
 
     return render_template('index.html')
