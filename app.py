@@ -78,7 +78,7 @@ def compare_dates_multiple_sheets(reference_file, comparison_file, output_file):
             if df1_sheet['control_date'].isnull().any():
                 raise ValueError(f"Certaines dates à contrôler sont mal formées dans la feuille {sheet_name} du fichier de comparaison.")
             
-            results_df = pd.DataFrame(columns=['Matricule', 'Date à contrôler', 'Result'])
+            results_df = pd.DataFrame(columns=['Matricule', 'Date à contrôler', 'Libellé'])
             for index, row1 in df1_sheet.iterrows():
                 matricule = row1['matricule']
                 control_date = row1['control_date']
