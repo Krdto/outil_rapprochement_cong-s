@@ -12,7 +12,6 @@ ALLOWED_EXTENSIONS = {'xlsx'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Create the upload folder if it doesn't exist
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
@@ -21,10 +20,6 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def compare_dates_multiple_sheets(reference_file, comparison_file, output_file):
-    """
-    Compare dates between a reference file and a comparison file with multiple sheets,
-    and write the results to an output file.
-    """
     try:
         df1 = pd.read_excel(comparison_file, sheet_name=None)
         df2 = pd.read_excel(reference_file)
@@ -82,10 +77,6 @@ def compare_dates_multiple_sheets(reference_file, comparison_file, output_file):
         print(f"Une erreur s'est produite : {e}")
 
 def compare_dates(reference_file, comparison_file, output_file):
-    """
-    Compare dates between a reference file and a comparison file,
-    and write the results to an output file.
-    """
     try:
         df1 = pd.read_excel(comparison_file)
         df2 = pd.read_excel(reference_file)
@@ -155,7 +146,6 @@ def compare_dates(reference_file, comparison_file, output_file):
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_files():
-    """Route for uploading files and triggering the comparison."""
     if request.method == 'POST':
         if 'file1' not in request.files or 'file2' not in request.files or 'file3' not in request.files:
             flash('No file part', 'danger')
