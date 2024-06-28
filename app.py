@@ -16,7 +16,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 def allowed_file(filename):
-    """Check if the file has an allowed extension."""
+    """Vérifie si le fichier à une extension acceptée."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def compare_dates_multiple_sheets(reference_file, comparison_file, output_file):
@@ -192,7 +192,7 @@ def upload_files():
 
 @app.route('/download/<filename>')
 def download_file(filename):
-    """Route for downloading the generated zip file."""
+    """Route pour le téléchargement du fichier."""
     try:
         return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
     except FileNotFoundError:
