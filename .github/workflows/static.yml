@@ -46,7 +46,7 @@ jobs:
         run: sudo apt-get install make  # Ensures make is installed
 
       - name: Build HTML documentation
-        run: .\make html
+        run: make html
         working-directory: documentation
         
       - name: Setup Pages
