@@ -17,7 +17,7 @@ Cette application est une application web basée sur Flask permettant de compare
 
 ## Documentation
 
-Pour accéder à plus de documentation, cliquez sur le lien suivant: `https://krdto.github.io/outil_rapprochement_cong-s/`
+Pour accéder à plus de documentation, cliquez sur le lien suivant: [https://krdto.github.io/outil_rapprochement_cong-s/](https://krdto.github.io/outil_rapprochement_cong-s/)
 
 ## Installation
 
@@ -44,7 +44,7 @@ Pour accéder à plus de documentation, cliquez sur le lien suivant: `https://kr
     ```
 
 2. Accédez à l'interface web :
-    Ouvrez un navigateur web et allez à `http://localhost:5000`.
+    Ouvrez un navigateur web et allez à [http://localhost:5000](http://localhost:5000).
 
 3. Déposez les fichiers Excel :
     - Sélectionnez les fichiers Excel nécessaires.
