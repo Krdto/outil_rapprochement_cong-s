@@ -1,6 +1,6 @@
 # Application de Comparaison de Dates dans des Fichiers Excel
 
-Cette application est une application web basée sur Flask permettant de comparer des dates présentes dans plusieurs fichiers Excel. L'application télécharge les fichiers, effectue des comparaisons de dates et génère un fichier de sortie avec les résultats.
+Cette application est une application web basée sur Flask permettant de comparer des dates présentes dans plusieurs fichiers Excel. L'application télécharge les fichiers, effectue des comparaisons de dates et génère un fichier de sortie avec les résultats. Cette application est utilisée afin de contrôler des dates de congés des employés et vérifier si elles concordent entre les différentes sources de données.
 
 ## Fonctionnalités
 
@@ -19,12 +19,12 @@ Cette application est une application web basée sur Flask permettant de compare
 
 1. Clonez le repository :
     ```bash
-    git clone https://github.com/votre-repo/employee-date-comparison.git
+    git clone https://github.com/Krdto/outil_rapprochement_cong-s.git
     ```
 
 2. Accédez au répertoire du projet :
     ```bash
-    cd employee-date-comparison
+    cd outil_rapprochement_cong-s
     ```
 
 3. Installez les packages Python requis :
