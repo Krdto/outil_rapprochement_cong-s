@@ -15,6 +15,10 @@ Cette application est une application web basée sur Flask permettant de compare
 - Pandas
 - XlsxWriter
 
+## Documentation
+
+Pour accéder à plus de documentation, cliquez sur le lien suivant: `https://krdto.github.io/outil_rapprochement_cong-s/`
+
 ## Installation
 
 1. Clonez le repository :
