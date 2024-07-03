@@ -9,7 +9,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('C:/Users/BENDAVID_E/Desktop/outil_rapprochement_cong-s/app.py'))
+sys.path.insert(0, os.path.abspath("../src"))
 
 project = 'Vérification des dates de congés'
 copyright = '2024, Elliot Bendavid'
