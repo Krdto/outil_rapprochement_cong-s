@@ -16,7 +16,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 def allowed_file(filename):
     """
-    Vérifie l'extension du fichier passé en paramètre. TETSTESTETESTETESTETTEST
+    Vérifie l'extension du fichier passé en paramètre.
 
     Args:
         filename (str): Le nom du fichier à vérifier.
