@@ -17,18 +17,24 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --color-brand-primary: black;
+  --color-brand-content: black;
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-brand-primary: white;
+  --color-brand-content: white;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-brand-primary: white;
+  --color-brand-content: white;
   
       }
     }
@@ -201,8 +207,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/SEGULA_Technologies_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/SEGULA_Technologies_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Documentation Outil de contrôle des dates de congés 2.0.0</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Recherche" name="q" aria-label="Recherche">
@@ -257,7 +266,7 @@
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
 <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">template_folder</span><span class="o">=</span><span class="s2">&quot;../templates&quot;</span><span class="p">,</span> <span class="n">static_folder</span><span class="o">=</span><span class="s2">&quot;../static&quot;</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s2">&quot;infokey&quot;</span>
 <span class="n">UPLOAD_FOLDER</span> <span class="o">=</span> <span class="s1">&#39;uploads&#39;</span>
 <span class="n">ALLOWED_EXTENSIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;xlsx&#39;</span><span class="p">}</span>
@@ -271,7 +280,7 @@
 <a class="viewcode-back" href="../app.html#app.allowed_file">[docs]</a>
 <span class="k">def</span> <span class="nf">allowed_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Vérifie l&#39;extension du fichier passé en paramètre.</span>
+<span class="sd">    Vérifie l&#39;extension du fichier passé en paramètre. TETSTESTETESTETESTETTEST</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        filename (str): Le nom du fichier à vérifier.</span>

@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import timedelta
 from zipfile import ZipFile
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 app.secret_key = "infokey"
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'xlsx'}
@@ -16,7 +16,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 def allowed_file(filename):
     """
-    Vérifie l'extension du fichier passé en paramètre.
+    Vérifie l'extension du fichier passé en paramètre. TETSTESTETESTETESTETTEST
 
     Args:
         filename (str): Le nom du fichier à vérifier.
