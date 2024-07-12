@@ -6,7 +6,7 @@ from zipfile import ZipFile
 
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 app.secret_key = "infokey"
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), '../uploads'))
 ALLOWED_EXTENSIONS = {'xlsx'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
